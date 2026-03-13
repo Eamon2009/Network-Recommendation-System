@@ -1,0 +1,206 @@
+# Social Network Data Analysis & Recommendation System
+
+A Python-based project that explores **data processing, dataset cleaning, and recommendation algorithms** using a simulated social network dataset.
+
+This project demonstrates how structured user data can be analyzed to generate **friend recommendations** and **page suggestions** similar to features used by modern social platforms.
+
+The system works with JSON datasets and applies **basic data science workflows and graph-based reasoning** to analyze relationships between users.
+
+---
+
+## Overview
+
+Social media platforms rely heavily on **data analysis and recommendation systems** to improve user experience.  
+This project recreates a simplified version of those mechanisms using Python.
+
+The system processes a dataset containing:
+
+- Users
+- Friend relationships
+- Liked pages
+
+Using this data, the project performs multiple operations including:
+
+- Data loading
+- Dataset cleaning
+- User network analysis
+- Friend recommendation using mutual connections
+- Page recommendation based on shared interests
+
+The goal is to demonstrate how **basic recommendation systems can be implemented using Python and structured datasets.**
+
+---
+
+## Key Features
+
+### Data Loading
+
+The project reads user and page data from JSON files and converts it into Python data structures for processing.
+
+This step ensures that the dataset can be efficiently accessed and manipulated during analysis.
+
+---
+
+### Data Cleaning
+
+Real-world datasets often contain inconsistencies or redundant data.  
+The cleaning module improves the dataset by:
+
+- Removing users with missing or empty names
+- Eliminating duplicate friend connections
+- Filtering inactive users with no activity
+- Removing duplicate page entries
+
+After processing, the cleaned dataset is saved for further analysis.
+
+---
+
+### Social Network Exploration
+
+The project includes a module that displays the dataset in a readable format, showing:
+
+- User names and IDs
+- Friend connections
+- Pages liked by each user
+- Available pages in the dataset
+
+This helps verify the dataset and understand the network structure.
+
+---
+
+### Friend Recommendation System
+
+This module implements a simplified **"People You May Know"** algorithm.
+
+The recommendation logic works by:
+
+1. Identifying a user's direct friends
+2. Finding friends-of-friends
+3. Counting the number of mutual connections
+4. Ranking potential recommendations based on shared friends
+
+This approach is commonly used in **graph-based social network analysis**.
+
+---
+
+### Page Recommendation System
+
+The project also suggests pages a user may like based on **shared interests with other users**.
+
+The algorithm works by:
+
+1. Identifying pages liked by the target user
+2. Finding other users with overlapping interests
+3. Suggesting pages those users like but the target user has not interacted with
+
+This represents a simplified form of **collaborative filtering**, a common recommendation strategy.
+
+
+### File Descriptions
+
+| File | Description |
+|-----|-------------|
+| `data.json` | Original dataset containing users and page information |
+| `Data_set2.json` | Dataset used for recommendation algorithms |
+| `cleaned_data.json` | Output dataset after data cleaning |
+| `load_and_display.py` | Loads and prints dataset contents |
+| `data_cleaning.py` | Cleans and prepares dataset |
+| `friend_recommendation.py` | Generates friend suggestions based on mutual friends |
+| `page_recommendation.py` | Recommends pages based on shared user interests |
+
+---
+
+## Technologies Used
+
+- **Python 3**
+- JSON datasets
+- Python Standard Library
+
+Key Python concepts used:
+
+- Dictionaries
+- Lists
+- Sets
+- File handling
+- Sorting algorithms
+- Data processing
+
+---
+
+## How the Recommendation Algorithm Works
+
+### Friend Recommendation
+
+1. Build a dictionary mapping users to their friends
+2. Identify the target user's direct friends
+3. Explore friends-of-friends
+4. Count mutual connections
+5. Rank suggested users by mutual friend count
+
+---
+
+### Page Recommendation
+
+1. Identify pages liked by the target user
+2. Compare interests with other users
+3. Measure overlap in liked pages
+4. Recommend new pages liked by similar users
+
+---
+
+## Example Output
+
+Example friend recommendation:
+People You May Know for User 17:
+[12, 9, 4]
+
+
+Example page recommendation:
+
+
+Pages You Might Like:
+[5, 8, 11]
+
+
+---
+
+## Learning Objectives
+
+This project focuses on building practical understanding of:
+
+- Data preprocessing
+- JSON dataset handling
+- Social network relationships
+- Graph-inspired recommendation logic
+- Algorithmic problem solving
+- Python data structures
+
+---
+
+## Future Improvements
+
+Possible extensions to make the system more advanced:
+
+- Network visualization using **NetworkX**
+- Graph analysis (centrality, clustering)
+- Recommendation ranking improvements
+- Machine learning based recommendations
+- Web interface for user interaction
+- Larger and more realistic datasets
+
+---
+
+## Author
+
+High school student exploring:
+
+- Python programming
+- Data science fundamentals
+- Machine learning concepts
+- System design and algorithms
+
+---
+
+## License
+    MIT
+
