@@ -192,10 +192,12 @@ Possible extensions to make the system more advanced:
 ---
 
 ## Author
-    Eamon
+
+ Eamon
 
 ---
 
 ## License
-    MIT
+
+  MIT
 
